@@ -1,19 +1,51 @@
 <!DOCTYPE html>
+
+<!--
+  RemyScoreTracker - an app to keep track of the scores in a Remy game.
+  Author: ArteneR
+  Git repo: https://github.com/ArteneR/RemyScoreTracker.git
+
+  Requirements:
+  -have Node (with Npm) installed
+
+  Before running the app:
+  -inside the project folder, run: npm install (this will install all the
+  required dependencies such as the Electron module)
+  -then run: npm install -g bower (this will install bower globally on your computer)
+  -then run: bower install (this will install all the dependencies like jquerry library)
+  -then run: npm install -g grunt-cli
+
+  How do I run it?
+  -type: grunt serve
+
+  -(OPTIONALLY if that doesn't work) type: npm start
+
+-->
+
 <html>
-  <head>
+<head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
+
+    <link type="text/css" rel="stylesheet" href="build/css/styles.css" />
+
+    <!--            Script Imports          -->
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
+    <!-- Scripts to import -->
+    <script src="build/js/scripts.js"></script>
+
+    <script>if (window.module) module = window.module;</script>
+    <script>
+        require('./renderer.js')
+    </script>
+    <!--             END of Script Imports              -->
+
+</head>
+<body>
+    <h1 id="test">Hello World!</h1>
     <!-- All of the Node.js APIs are available in this renderer process. -->
     We are using node <script>document.write(process.versions.node)</script>,
     Chromium <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
-  </body>
-
-  <script>
-    // You can also require other files to run in this process
-    require('./renderer.js')
-  </script>
+</body>
 </html>
