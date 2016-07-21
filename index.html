@@ -25,9 +25,13 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World!</title>
 
-    <link type="text/css" rel="stylesheet" href="build/css/styles.css" />
+    <!-- Using 'grunt serve' -->
+    <!-- <link type="text/css" rel="stylesheet" href="build/css/styles.css" /> -->
+    <link type="text/css" rel="stylesheet" href="public/css/stylesheet.css" />
+
 
     <!--            Script Imports          -->
     <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script>
@@ -42,10 +46,7 @@
 
 </head>
 <body>
-    <h1 id="test">Hello World!</h1>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
+    <div id="app-wrapper">
+    </div>
 </body>
 </html>

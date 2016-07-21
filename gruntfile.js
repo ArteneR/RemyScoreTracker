@@ -4,7 +4,7 @@ module.exports = function(grunt) {
     grunt.registerTask('serve', function() {
 
         console.log('Starting the application...');
-        grunt.task.run(['concat', 'shell:start_app']);
+        grunt.task.run(['concat', 'less', 'shell:start_app']);
 
     });
 
@@ -13,7 +13,8 @@ module.exports = function(grunt) {
             js: {
                 src: [
                     'bower_components/jquery/dist/jquery.js',
-                    'public/js/core.js'
+                    'public/js/core.js',
+                    'public/js/common_functions.js'
                 ],
                 dest: 'build/js/scripts.js'
             },
@@ -27,6 +28,13 @@ module.exports = function(grunt) {
         shell: {
             start_app: {
                 command: 'npm start'
+            }
+        },
+        less: {
+            development: {
+                files: {
+                    'public/css/stylesheet.css': 'public/less/stylesheet.less'
+                }
             }
         },
         watch: {
@@ -44,5 +52,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-shell');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-less');
 
 };

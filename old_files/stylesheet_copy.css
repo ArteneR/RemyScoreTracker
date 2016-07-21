@@ -1,0 +1,145 @@
+html {
+    text-align: center;
+}
+
+a {
+    color: black;
+}
+
+body {
+    background-color: #010625;
+    font-family: Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#app-wrapper {
+    width: 100%;
+    height: 100%;
+    max-width: 1920px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    background: url(../resources/img/background2.jpg) center center;
+}
+
+#header {
+    height: 30%;
+}
+
+#title-box {
+    font-family: SummerSketchFont, Verdana, sans-serif;
+    font-size: 60px;
+    padding-top: 20px;
+    margin: 0 auto;
+    max-width: 550px;
+    position: relative;
+}
+
+#middle {
+    height: 50%;
+    position: relative;
+}
+
+#footer {
+    height: 20%;
+}
+
+#button-container {
+    padding-top:1%;
+}
+
+#start-button {
+    width: 300px;
+    height: 60px;
+    font-size: 30px;
+    background-color: #e2d285;
+    line-height: 60px;
+    border-radius: 7px;
+    /*position: absolute;*/
+    /*top: 70px;*/
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 8px 0 rgb(56, 56, 55);
+    border-top: 2px solid beige;
+    cursor: pointer;
+}
+
+#start-button:hover {
+    background-color: #ead881;
+}
+
+#start-button:active {
+    -ms-transform: translate(0, 3px); /* IE 9 */
+   	-webkit-transform: translate(0, 3px); /* Safari */
+    transform: translate(0, 3px);
+    box-shadow: 0 5px 0 rgb(56, 56, 55);
+    border-top: 4px solid beige;
+}
+
+#created-by-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 30px;
+    line-height: 30px;
+}
+
+#created-by {
+    font-size: 60%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -khtml-user-select: none;    /* Konqueror */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+@font-face {
+  font-family: 'SummerSketchFont';
+  src: url('../resources/fonts/summr_sketch.eot'); /* IE9 Compat Modes */
+  src: url('../resources/fonts/summr_sketch.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../resources/fonts/summr_sketch.woff') format('woff'), /* Modern Browsers */
+       url('../resources/fonts/summr_sketch.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../resources/fonts/summr_sketch.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
