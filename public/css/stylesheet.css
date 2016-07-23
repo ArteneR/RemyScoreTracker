@@ -1,4 +1,7 @@
 /* Should sum up to 100% */
+/* 3*x */
+/* 5*x */
+/* 2*x */
 html {
   text-align: center;
 }
@@ -16,16 +19,41 @@ html #app-wrapper {
   height: 100%;
   max-width: 1920px;
   position: absolute;
+  z-index: -9999;
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
   background: url(../resources/img/background2.jpg) center center;
 }
-html #app-wrapper #header {
-  height: 30%;
+html #app-wrapper #nav-bar {
+  height: 70px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #5e9861;
+  display: none;
+  line-height: 70px;
+  font-size: 20px;
+  font-weight: bold;
 }
-html #app-wrapper #header #title-box {
+html #app-wrapper #nav-bar #back-button {
+  display: inline-block;
+  position: absolute;
+  left: 20px;
+}
+html #app-wrapper #nav-bar #page-title {
+  display: inline-block;
+}
+html #app-wrapper #content {
+  height: 100%;
+}
+html #app-wrapper #content #start-page #header {
+  height: 30%;
+  min-height: 150px;
+}
+html #app-wrapper #content #start-page #header #title-box {
   font-family: SummerSketchFont, Verdana, sans-serif;
   font-size: 60px;
   padding-top: 20px;
@@ -33,52 +61,34 @@ html #app-wrapper #header #title-box {
   max-width: 550px;
   position: relative;
 }
-html #app-wrapper #header #title-box .title-lines {
+html #app-wrapper #content #start-page #header #title-box .title-lines {
   margin: auto;
 }
-html #app-wrapper #header #title-box .title-lines #second-line-text {
+html #app-wrapper #content #start-page #header #title-box .title-lines #second-line-text {
   margin-left: 20%;
 }
-html #app-wrapper #header #title-box .title-lines #third-line-text {
+html #app-wrapper #content #start-page #header #title-box .title-lines #third-line-text {
   margin-left: 10%;
 }
-html #app-wrapper #middle {
+html #app-wrapper #content #start-page #middle {
   height: 50%;
+  min-height: 250px;
   position: relative;
 }
-html #app-wrapper #footer {
+html #app-wrapper #content #start-page #footer {
   height: 20%;
+  min-height: 100px;
 }
-html #app-wrapper #footer #button-container {
+html #app-wrapper #content #start-page #footer #button-container {
   padding-top: 1%;
 }
-html #app-wrapper #footer #button-container #start-button {
-  width: 300px;
-  height: 60px;
-  font-size: 30px;
-  background-color: #e2d285;
-  line-height: 60px;
-  border-radius: 7px;
+html #app-wrapper #content #start-page #footer #button-container #start-button {
   left: 0;
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  box-shadow: 0 8px 0 #383837;
-  border-top: 2px solid beige;
-  cursor: pointer;
 }
-html #app-wrapper #footer #button-container #start-button:hover {
-  background-color: #ead881;
-}
-html #app-wrapper #footer #button-container #start-button:active {
-  -ms-transform: translate(0, 3px);
-  /* IE 9 */
-  -webkit-transform: translate(0, 3px);
-  /* Safari */
-  transform: translate(0, 3px);
-  box-shadow: 0 5px 0 #383837;
-}
-html #app-wrapper #footer #created-by-container {
+html #app-wrapper #content #start-page #footer #created-by-container {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -87,8 +97,96 @@ html #app-wrapper #footer #created-by-container {
   height: 30px;
   line-height: 30px;
 }
-html #app-wrapper #footer #created-by-container #created-by {
+html #app-wrapper #content #start-page #footer #created-by-container #created-by {
   font-size: 60%;
+}
+html #app-wrapper #content #players-page #add-player-button-container {
+  height: 100px;
+  background-color: grey;
+}
+html #app-wrapper #content #players-page #add-player-button-container #add-player-button-line {
+  -ms-transform: translate(0, calc(calc(100px - 40px) / 2));
+  /* IE 9 */
+  -webkit-transform: translate(0, calc(calc(100px - 40px) / 2));
+  /* Safari */
+  transform: translate(0, calc(calc(100px - 40px) / 2));
+}
+html #app-wrapper #content #players-page #add-player-button-container #add-player-button-line #add-player-button {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+html #app-wrapper #content #players-page #players-container {
+  -ms-transform: translate(0, -200px);
+  /* IE 9 */
+  -webkit-transform: translate(0, -200px);
+  /* Safari */
+  transform: translate(0, -200px);
+  position: relative;
+  z-index: -1000;
+}
+html #app-wrapper #content #players-page #players-container #new-player-container {
+  height: 200px;
+  background-color: red;
+  opacity: 0.5;
+}
+html #app-wrapper #content #players-page #players-container #players-list-container {
+  height: 500px;
+  background-color: #ae3ed0;
+  opacity: 0.5;
+}
+.button {
+  background-color: #e2d285;
+  border-radius: 7px;
+  box-shadow: 0 8px 0 #383837;
+  border-top: 2px solid beige;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+.button:hover {
+  background-color: #ead881;
+}
+.button:active {
+  -ms-transform: translate(0, 3px);
+  /* IE 9 */
+  -webkit-transform: translate(0, 3px);
+  /* Safari */
+  transform: translate(0, 3px);
+  box-shadow: 0 5px 0 #383837;
+}
+.medium-button {
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+}
+.large-button {
+  width: 300px;
+  height: 60px;
+  font-size: 30px;
+  line-height: 60px;
+}
+.clickable {
+  cursor: pointer;
+}
+.centered-x-axis {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 .noselect {
   -webkit-touch-callout: none;
