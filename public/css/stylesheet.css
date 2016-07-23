@@ -4,6 +4,20 @@
 /* 2*x */
 html {
   text-align: center;
+  cursor: default;
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Chrome/Safari/Opera */
+  -khtml-user-select: none;
+  /* Konqueror */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  not supported by any browser */
 }
 html a {
   color: black;
@@ -37,6 +51,11 @@ html #app-wrapper #nav-bar {
   line-height: 70px;
   font-size: 20px;
   font-weight: bold;
+  box-shadow: 0 -2px 15px black;
+  z-index: 1000;
+}
+html #app-wrapper #nav-bar:hover {
+  box-shadow: 0 0 15px black;
 }
 html #app-wrapper #nav-bar #back-button {
   display: inline-block;
@@ -101,15 +120,17 @@ html #app-wrapper #content #start-page #footer #created-by-container #created-by
   font-size: 60%;
 }
 html #app-wrapper #content #players-page #add-player-button-container {
-  height: 100px;
-  background-color: grey;
+  height: 150px;
+  background-color: #434d56;
+  position: relative;
+  border-bottom: 2px solid #321244;
 }
 html #app-wrapper #content #players-page #add-player-button-container #add-player-button-line {
-  -ms-transform: translate(0, calc(calc(100px - 40px) / 2));
+  -ms-transform: translate(0, calc(calc(150px - 40px) / 2));
   /* IE 9 */
-  -webkit-transform: translate(0, calc(calc(100px - 40px) / 2));
+  -webkit-transform: translate(0, calc(calc(150px - 40px) / 2));
   /* Safari */
-  transform: translate(0, calc(calc(100px - 40px) / 2));
+  transform: translate(0, calc(calc(150px - 40px) / 2));
 }
 html #app-wrapper #content #players-page #add-player-button-container #add-player-button-line #add-player-button {
   left: 0;
@@ -117,44 +138,62 @@ html #app-wrapper #content #players-page #add-player-button-container #add-playe
   margin-left: auto;
   margin-right: auto;
 }
-html #app-wrapper #content #players-page #players-container {
-  -ms-transform: translate(0, -200px);
-  /* IE 9 */
-  -webkit-transform: translate(0, -200px);
-  /* Safari */
-  transform: translate(0, -200px);
-  position: relative;
-  z-index: -1000;
-}
 html #app-wrapper #content #players-page #players-container #new-player-container {
   height: 200px;
-  background-color: red;
-  opacity: 0.5;
+  background-color: #484356;
+  position: relative;
+}
+html #app-wrapper #content #players-page #players-container #new-player-container #new-player-title {
+  padding-top: 10px;
+  padding-left: 20px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #5e9861;
+  text-align: left;
 }
 html #app-wrapper #content #players-page #players-container #players-list-container {
-  height: 500px;
-  background-color: #ae3ed0;
-  opacity: 0.5;
+  height: 900px;
+  background-color: #434d56;
+  position: relative;
+  border-top: 2px solid #321244;
 }
+/******************************************************************************/
+.circle-space {
+  width: 40px;
+  height: 40px;
+  background-color: #484356;
+  position: absolute;
+  bottom: -24px;
+  border-radius: 50%;
+  border: 2px solid #321244;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.circle-letter {
+  width: 40px;
+  height: 40px;
+  background-color: #423642;
+  position: absolute;
+  top: -24px;
+  border-radius: 50%;
+  border: 2px solid #321244;
+  line-height: 40px;
+  font-size: calc(40px  * 0.75);
+  /* 75% */
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+/******************************************************************************/
 .button {
   background-color: #e2d285;
   border-radius: 7px;
   box-shadow: 0 8px 0 #383837;
   border-top: 2px solid beige;
   cursor: pointer;
-  -webkit-touch-callout: none;
-  /* iOS Safari */
-  -webkit-user-select: none;
-  /* Chrome/Safari/Opera */
-  -khtml-user-select: none;
-  /* Konqueror */
-  -moz-user-select: none;
-  /* Firefox */
-  -ms-user-select: none;
-  /* Internet Explorer/Edge */
-  user-select: none;
-  /* Non-prefixed version, currently
-                                  not supported by any browser */
 }
 .button:hover {
   background-color: #ead881;
@@ -179,6 +218,7 @@ html #app-wrapper #content #players-page #players-container #players-list-contai
   font-size: 30px;
   line-height: 60px;
 }
+/******************************************************************************/
 .clickable {
   cursor: pointer;
 }
@@ -203,6 +243,7 @@ html #app-wrapper #content #players-page #players-container #players-list-contai
   /* Non-prefixed version, currently
                                   not supported by any browser */
 }
+/******************************************************************************/
 @font-face {
   font-family: 'SummerSketchFont';
   src: url('../resources/fonts/summr_sketch.eot');

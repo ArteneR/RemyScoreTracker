@@ -13,6 +13,7 @@ module.exports = function(grunt) {
             js: {
                 src: [
                     'bower_components/jquery/dist/jquery.js',
+                    'node_modules/jquery-transform/build/jquery-transform.js',
                     'public/js/core.js',
                     'public/js/common_functions.js'
                 ],

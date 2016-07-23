@@ -1,5 +1,6 @@
 @link-color: black;
 @background-color: #010625;
+@background-color-2: #443e48;
 @main-font: Verdana, sans-serif;
 @rummy-title-font: SummerSketchFont, Verdana, sans-serif;
 @background-image-width: 1920px;
@@ -19,19 +20,40 @@
 @large-button-height: 60px;
 @medium-button-width: 200px;
 @medium-button-height: 40px;
-
 @button-color: #e2d285;
 @button-color-hover: #ead881;
 @button-color-border-top: beige;
 @button-color-box-shadow: rgb(56, 56, 55);
 
+@created-by-container-height: 30px;
 
+@add-player-button-container-height: 150px;
+@add-player-button-container-color: #434d56;
+@add-player-button-container-border-size: 2px;
+
+@add-player-button-height: @medium-button-height;
+
+@new-player-container-height: 200px;
+@new-player-container-color: #484356;
+
+@players-list-container-height: 900px;
+@players-list-container-color: @add-player-button-container-color;
+
+@circle-size: 40px;
+@circle-color: #423642;
+@circle-border-size: 2px;
+@circle-border-color: #321244;
+@half-circle-size: (@circle-size / 2);
+@circle-position-offset: (@half-circle-size + @circle-border-size + @add-player-button-container-border-size);
+@behind-circle-color: @new-player-container-color;
 
 
 
 
 html {
     text-align: center;
+    cursor: default;
+    .noselect;
 
     a {
         color: @link-color;
@@ -67,6 +89,13 @@ html {
             line-height: @nav-bar-height;
             font-size: 20px;
             font-weight: bold;
+
+            box-shadow: 0 -2px 15px black;
+            z-index: 1000;
+
+            &:hover {
+                box-shadow: 0 0 15px black;
+            }
 
             #back-button {
                 display: inline-block;
@@ -134,7 +163,6 @@ html {
                     }
 
                     #created-by-container {
-                        @created-by-container-height: 30px;
                         position: absolute;
                         bottom: 0;
                         left: 0;
@@ -155,13 +183,12 @@ html {
             #players-page {
 
                 #add-player-button-container {
-                    @add-player-button-container-height: 100px;
-                    @add-player-button-container-color: grey;
                     height: @add-player-button-container-height;
                     background-color: @add-player-button-container-color;
+                    position: relative;
+                    border-bottom: @add-player-button-container-border-size solid @circle-border-color;
 
                     #add-player-button-line {
-                        @add-player-button-height: @medium-button-height;
                         @container-and-button-diff: calc(@add-player-button-container-height~"-"@add-player-button-height);
                         @x-axis: 0;
                         @y-axis: calc(@container-and-button-diff~"/ 2");
@@ -173,33 +200,32 @@ html {
                             .centered-x-axis;
                         }
                     }
+
                 }
 
                 #players-container {
-                    @new-player-container-height: 200px;
-                    @new-player-container-color: red;
-                    @players-list-container-height: 500px;
-                    @players-list-container-color: #ae3ed0;
-
-                    @x-axis: 0;
-                    @y-axis: -@new-player-container-height;
-                    -ms-transform: translate(@x-axis, @y-axis); /* IE 9 */
-                   	-webkit-transform: translate(@x-axis, @y-axis); /* Safari */
-                    transform: translate(@x-axis, @y-axis);
-                    position: relative;
-                    z-index: -1000;
 
                     #new-player-container {
                         height: @new-player-container-height;
                         background-color: @new-player-container-color;
-                        opacity: 0.5;
+                        position: relative;
+
+                        #new-player-title {
+                            padding-top: 10px;
+                            padding-left: 20px;
+                            font-size: 12px;
+                            font-weight: bold;
+                            color: #5e9861;
+                            text-align: left;
+                        }
                     }
 
                     #players-list-container {
                         height: @players-list-container-height;
                         background-color: @players-list-container-color;
-                        opacity: 0.5;
-                        // position: absolute;
+                        position: relative;
+                        border-top: @add-player-button-container-border-size solid @circle-border-color;
+
                     }
 
                 }
@@ -213,6 +239,60 @@ html {
 }
 
 
+/******************************************************************************/
+
+
+.font-app-title {
+
+}
+
+.font-button {
+
+}
+
+.font-nav-bar {
+
+}
+
+.font-title-small {
+
+}
+
+.font-normal {
+
+}
+
+
+/******************************************************************************/
+
+
+.circle-space {
+    width: @circle-size;
+    height: @circle-size;
+    background-color: @behind-circle-color;
+    position: absolute;
+    bottom: (-@circle-position-offset);
+    border-radius: 50%;
+    border: @circle-border-size solid @circle-border-color;
+    .centered-x-axis;
+}
+
+.circle-letter {
+    width: @circle-size;
+    height: @circle-size;
+    background-color: @circle-color;
+    position: absolute;
+    top: (-@circle-position-offset);
+    border-radius: 50%;
+    border: @circle-border-size solid @circle-border-color;
+    line-height: @circle-size;
+    font-size: calc(@circle-size~" * 0.75");    /* 75% */
+    .centered-x-axis;
+}
+
+
+/******************************************************************************/
+
 
 .button {
     background-color: @button-color;
@@ -220,7 +300,6 @@ html {
     box-shadow: 0 8px 0 @button-color-box-shadow;
     border-top: 2px solid @button-color-border-top;
     .clickable;
-    .noselect;
 
     &:hover {
         background-color: @button-color-hover;
@@ -251,6 +330,9 @@ html {
 }
 
 
+/******************************************************************************/
+
+
 .clickable {
     cursor: pointer;
 }
@@ -271,6 +353,10 @@ html {
   user-select: none;           /* Non-prefixed version, currently
                                   not supported by any browser */
 }
+
+
+/******************************************************************************/
+
 
 @font-face {
   font-family: 'SummerSketchFont';
