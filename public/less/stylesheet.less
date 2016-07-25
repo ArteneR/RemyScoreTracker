@@ -1,8 +1,14 @@
+
 @link-color: black;
+
 @background-color: #010625;
 @background-color-2: #443e48;
-@main-font: Verdana, sans-serif;
-@rummy-title-font: SummerSketchFont, Verdana, sans-serif;
+
+@font-main: Verdana, sans-serif;
+@font-app-title: SummerSketchFont, Verdana, sans-serif;
+@font-user-input: Verdana, sans-serif;
+@font-user-input-size: 20px;
+
 @background-image-width: 1920px;
 
 /* Should sum up to 100% */
@@ -18,8 +24,10 @@
 
 @large-button-width: 300px;
 @large-button-height: 60px;
+
 @medium-button-width: 200px;
 @medium-button-height: 40px;
+
 @button-color: #e2d285;
 @button-color-hover: #ead881;
 @button-color-border-top: beige;
@@ -35,6 +43,8 @@
 
 @new-player-container-height: 200px;
 @new-player-container-color: #484356;
+
+@new-player-title-color: #5e9861;
 
 @players-list-container-height: 900px;
 @players-list-container-color: @add-player-button-container-color;
@@ -59,12 +69,38 @@ html {
         color: @link-color;
     }
 
+    table {
+        margin: 0 auto;
+
+        tr {
+            td {
+                padding: 6px;
+            }
+
+            td:nth-child(1) {
+                text-align: right;
+            }
+
+            td:nth-child(2) {
+                text-align: left;
+            }
+
+        }
+    }
+
+    input {
+        padding: 3px;
+        .font-user-input;
+    }
+
     body {
         background-color: @background-color;
-        font-family: @main-font;
         margin: 0;
         padding: 0;
+        .font-medium;
     }
+
+
 
     #app-wrapper {
         width: 100%;
@@ -87,8 +123,6 @@ html {
             background-color: @nav-bar-color;
             display: none;
             line-height: @nav-bar-height;
-            font-size: 20px;
-            font-weight: bold;
 
             box-shadow: 0 -2px 15px black;
             z-index: 1000;
@@ -101,11 +135,12 @@ html {
                 display: inline-block;
                 position: absolute;
                 left: 20px;
+                .font-nav-bar;
             }
 
             #page-title {
                 display: inline-block;
-
+                .font-nav-bar;
             }
 
         }
@@ -120,12 +155,11 @@ html {
                     min-height: @header-section-min-height;
 
                     #title-box {
-                        font-family: @rummy-title-font;
-                        font-size: 60px;
                         padding-top: 20px;
                         margin: 0 auto;
                         max-width: 550px;
                         position: relative;
+                        .font-app-title;
 
                         .title-lines {
                             margin: auto;
@@ -172,7 +206,7 @@ html {
                         line-height: @created-by-container-height;
 
                         #created-by {
-                            font-size: 60%;
+                            .font-small;
                         }
 
                     }
@@ -213,11 +247,19 @@ html {
                         #new-player-title {
                             padding-top: 10px;
                             padding-left: 20px;
-                            font-size: 12px;
-                            font-weight: bold;
-                            color: #5e9861;
+                            color: @new-player-title-color;
                             text-align: left;
+                            .font-small-title;
                         }
+
+                        #new-player-info {
+                            padding-top: 20px;
+
+                            #new-player-name {
+                                width: 200px;
+                            }
+                        }
+
                     }
 
                     #players-list-container {
@@ -242,24 +284,49 @@ html {
 /******************************************************************************/
 
 
+/******************************************************************************/
+
+
+
+
+
 .font-app-title {
-
-}
-
-.font-button {
-
+    font-size: 60px;
+    font-family: @font-app-title;
 }
 
 .font-nav-bar {
-
+    font-size: 20px;
+    font-weight: bold;
+    font-family: @font-main;
 }
 
-.font-title-small {
-
+.font-small-title {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: @font-main;
 }
 
-.font-normal {
+.font-user-input {
+    font-size: @font-user-input-size;
+    font-weight: bold;
+    font-family: @font-user-input;
+}
 
+.font-small {
+    font-size: 8px;
+    font-weight: bold;
+    font-family: @font-main;
+}
+
+.font-medium {
+    font-size: 16px;
+    font-family: @font-main;
+}
+
+.font-large {
+    font-size: 24px;
+    font-family: @font-main;
 }
 
 
@@ -362,7 +429,6 @@ html {
   font-family: 'SummerSketchFont';
   src: url('../resources/fonts/summr_sketch.eot'); /* IE9 Compat Modes */
   src: url('../resources/fonts/summr_sketch.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../resources/fonts/summr_sketch.woff') format('woff'), /* Modern Browsers */
        url('../resources/fonts/summr_sketch.ttf')  format('truetype'), /* Safari, Android, iOS */
        url('../resources/fonts/summr_sketch.svg#svgFontName') format('svg'); /* Legacy iOS */
 }

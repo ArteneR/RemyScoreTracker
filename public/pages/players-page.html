@@ -8,6 +8,31 @@
     <div id="players-container">
         <div id="new-player-container">
             <div id="new-player-title">New Player:</div>
+            <div id="new-player-info">
+                <form>
+                    <table>
+                        <tr>
+                            <td>Name:</td>
+                            <td><input type="text" name="new-player-name" id="new-player-name" /></td>
+                        </tr>
+                        <tr>
+                            <td>Color:</td>
+                            <td>
+                                <input type="color" name="new-player-color" id="new-player-color" value="#ffffff" size="8"/>
+                                <span id="selected-color-preview">(#ffffff)</span>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div id="new-player-submit">
+                <div id="new-player-btn-cancel">
+                    Cancel
+                </div>
+                <div id="new-player-btn-ok">
+                    OK
+                </div>
+            </div>
         </div>
         <div id="players-list-container">
             <div class="circle-letter">P</div>

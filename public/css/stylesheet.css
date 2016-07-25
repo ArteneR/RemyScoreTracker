@@ -22,11 +22,30 @@ html {
 html a {
   color: black;
 }
+html table {
+  margin: 0 auto;
+}
+html table tr td {
+  padding: 6px;
+}
+html table tr td:nth-child(1) {
+  text-align: right;
+}
+html table tr td:nth-child(2) {
+  text-align: left;
+}
+html input {
+  padding: 3px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+}
 html body {
   background-color: #010625;
-  font-family: Verdana, sans-serif;
   margin: 0;
   padding: 0;
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
 }
 html #app-wrapper {
   width: 100%;
@@ -49,8 +68,6 @@ html #app-wrapper #nav-bar {
   background-color: #5e9861;
   display: none;
   line-height: 70px;
-  font-size: 20px;
-  font-weight: bold;
   box-shadow: 0 -2px 15px black;
   z-index: 1000;
 }
@@ -61,9 +78,15 @@ html #app-wrapper #nav-bar #back-button {
   display: inline-block;
   position: absolute;
   left: 20px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
 }
 html #app-wrapper #nav-bar #page-title {
   display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
 }
 html #app-wrapper #content {
   height: 100%;
@@ -73,12 +96,12 @@ html #app-wrapper #content #start-page #header {
   min-height: 150px;
 }
 html #app-wrapper #content #start-page #header #title-box {
-  font-family: SummerSketchFont, Verdana, sans-serif;
-  font-size: 60px;
   padding-top: 20px;
   margin: 0 auto;
   max-width: 550px;
   position: relative;
+  font-size: 60px;
+  font-family: SummerSketchFont, Verdana, sans-serif;
 }
 html #app-wrapper #content #start-page #header #title-box .title-lines {
   margin: auto;
@@ -117,7 +140,9 @@ html #app-wrapper #content #start-page #footer #created-by-container {
   line-height: 30px;
 }
 html #app-wrapper #content #start-page #footer #created-by-container #created-by {
-  font-size: 60%;
+  font-size: 8px;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
 }
 html #app-wrapper #content #players-page #add-player-button-container {
   height: 150px;
@@ -146,16 +171,57 @@ html #app-wrapper #content #players-page #players-container #new-player-containe
 html #app-wrapper #content #players-page #players-container #new-player-container #new-player-title {
   padding-top: 10px;
   padding-left: 20px;
-  font-size: 12px;
-  font-weight: bold;
   color: #5e9861;
   text-align: left;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+}
+html #app-wrapper #content #players-page #players-container #new-player-container #new-player-info {
+  padding-top: 20px;
+}
+html #app-wrapper #content #players-page #players-container #new-player-container #new-player-info #new-player-name {
+  width: 200px;
 }
 html #app-wrapper #content #players-page #players-container #players-list-container {
   height: 900px;
   background-color: #434d56;
   position: relative;
   border-top: 2px solid #321244;
+}
+/******************************************************************************/
+/******************************************************************************/
+.font-app-title {
+  font-size: 60px;
+  font-family: SummerSketchFont, Verdana, sans-serif;
+}
+.font-nav-bar {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+}
+.font-small-title {
+  font-size: 12px;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+}
+.font-user-input {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+}
+.font-small {
+  font-size: 8px;
+  font-weight: bold;
+  font-family: Verdana, sans-serif;
+}
+.font-medium {
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+}
+.font-large {
+  font-size: 24px;
+  font-family: Verdana, sans-serif;
 }
 /******************************************************************************/
 .circle-space {
@@ -248,6 +314,6 @@ html #app-wrapper #content #players-page #players-container #players-list-contai
   font-family: 'SummerSketchFont';
   src: url('../resources/fonts/summr_sketch.eot');
   /* IE9 Compat Modes */
-  src: url('../resources/fonts/summr_sketch.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../resources/fonts/summr_sketch.woff') format('woff'), /* Modern Browsers */ url('../resources/fonts/summr_sketch.ttf') format('truetype'), /* Safari, Android, iOS */ url('../resources/fonts/summr_sketch.svg#svgFontName') format('svg');
+  src: url('../resources/fonts/summr_sketch.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../resources/fonts/summr_sketch.ttf') format('truetype'), /* Safari, Android, iOS */ url('../resources/fonts/summr_sketch.svg#svgFontName') format('svg');
   /* Legacy iOS */
 }
