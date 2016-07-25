@@ -164,7 +164,7 @@ html #app-wrapper #content #players-page #add-player-button-container #add-playe
   margin-right: auto;
 }
 html #app-wrapper #content #players-page #players-container #new-player-container {
-  height: 200px;
+  height: 250px;
   background-color: #484356;
   position: relative;
 }
@@ -182,6 +182,85 @@ html #app-wrapper #content #players-page #players-container #new-player-containe
 }
 html #app-wrapper #content #players-page #players-container #new-player-container #new-player-info #new-player-name {
   width: 200px;
+}
+html #app-wrapper #content #players-page #players-container #new-player-container #new-player-submit {
+  margin: 0 auto;
+  width: 50%;
+  min-width: 300px;
+  max-width: 500px;
+  padding-top: 30px;
+  position: relative;
+}
+html #app-wrapper #content #players-page #players-container #new-player-container #new-player-submit #new-player-btn-cancel {
+  left: 0;
+  display: inline-block;
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  font-size: 10px;
+  line-height: 20px;
+  box-shadow: 0 5px 0 #383837;
+  background-color: #e2d285;
+  border-radius: 7px;
+  border-top: 2px solid beige;
+  cursor: pointer;
+}
+html #app-wrapper #content #players-page #players-container #new-player-container #new-player-submit #new-player-btn-cancel:hover {
+  background-color: #ead881;
+}
+html #app-wrapper #content #players-page #players-container #new-player-container #new-player-submit #new-player-btn-cancel:active {
+  -ms-transform: translate(0, 3px);
+  /* IE 9 */
+  -webkit-transform: translate(0, 3px);
+  /* Safari */
+  transform: translate(0, 3px);
+  box-shadow: 0 5px 0 #383837;
+}
+html #app-wrapper #content #players-page #players-container #new-player-container #new-player-submit #new-player-btn-cancel:active {
+  -ms-transform: translate(0, 2px);
+  /* IE 9 */
+  -webkit-transform: translate(0, 2px);
+  /* Safari */
+  transform: translate(0, 2px);
+  box-shadow: 0 3px 0 #383837;
+}
+html #app-wrapper #content #players-page #players-container #new-player-container #new-player-submit #new-player-btn-ok {
+  right: 0;
+  display: inline-block;
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  font-size: 10px;
+  line-height: 20px;
+  box-shadow: 0 5px 0 #383837;
+  background-color: #e2d285;
+  border-radius: 7px;
+  border-top: 2px solid beige;
+  cursor: pointer;
+}
+html #app-wrapper #content #players-page #players-container #new-player-container #new-player-submit #new-player-btn-ok:hover {
+  background-color: #ead881;
+}
+html #app-wrapper #content #players-page #players-container #new-player-container #new-player-submit #new-player-btn-ok:active {
+  -ms-transform: translate(0, 3px);
+  /* IE 9 */
+  -webkit-transform: translate(0, 3px);
+  /* Safari */
+  transform: translate(0, 3px);
+  box-shadow: 0 5px 0 #383837;
+}
+html #app-wrapper #content #players-page #players-container #new-player-container #new-player-submit #new-player-btn-ok:active {
+  -ms-transform: translate(0, 2px);
+  /* IE 9 */
+  -webkit-transform: translate(0, 2px);
+  /* Safari */
+  transform: translate(0, 2px);
+  box-shadow: 0 3px 0 #383837;
+}
+html #app-wrapper #content #players-page #players-container #new-player-container #new-player-submit .new-player-btn {
+  display: inline-block;
+  width: 100px;
+  position: absolute;
 }
 html #app-wrapper #content #players-page #players-container #players-list-container {
   height: 900px;
@@ -253,11 +332,13 @@ html #app-wrapper #content #players-page #players-container #players-list-contai
   margin-left: auto;
   margin-right: auto;
 }
+.circle-letter:hover {
+  background-color: #504150;
+}
 /******************************************************************************/
 .button {
   background-color: #e2d285;
   border-radius: 7px;
-  box-shadow: 0 8px 0 #383837;
   border-top: 2px solid beige;
   cursor: pointer;
 }
@@ -272,17 +353,95 @@ html #app-wrapper #content #players-page #players-container #players-list-contai
   transform: translate(0, 3px);
   box-shadow: 0 5px 0 #383837;
 }
+.small-button {
+  width: 100px;
+  height: 20px;
+  font-size: 10px;
+  line-height: 20px;
+  box-shadow: 0 5px 0 #383837;
+  background-color: #e2d285;
+  border-radius: 7px;
+  border-top: 2px solid beige;
+  cursor: pointer;
+}
+.small-button:hover {
+  background-color: #ead881;
+}
+.small-button:active {
+  -ms-transform: translate(0, 3px);
+  /* IE 9 */
+  -webkit-transform: translate(0, 3px);
+  /* Safari */
+  transform: translate(0, 3px);
+  box-shadow: 0 5px 0 #383837;
+}
+.small-button:active {
+  -ms-transform: translate(0, 2px);
+  /* IE 9 */
+  -webkit-transform: translate(0, 2px);
+  /* Safari */
+  transform: translate(0, 2px);
+  box-shadow: 0 3px 0 #383837;
+}
 .medium-button {
   width: 200px;
   height: 40px;
   font-size: 20px;
   line-height: 40px;
+  box-shadow: 0 8px 0 #383837;
+  background-color: #e2d285;
+  border-radius: 7px;
+  border-top: 2px solid beige;
+  cursor: pointer;
+}
+.medium-button:hover {
+  background-color: #ead881;
+}
+.medium-button:active {
+  -ms-transform: translate(0, 3px);
+  /* IE 9 */
+  -webkit-transform: translate(0, 3px);
+  /* Safari */
+  transform: translate(0, 3px);
+  box-shadow: 0 5px 0 #383837;
+}
+.medium-button:active {
+  -ms-transform: translate(0, 3px);
+  /* IE 9 */
+  -webkit-transform: translate(0, 3px);
+  /* Safari */
+  transform: translate(0, 3px);
+  box-shadow: 0 5px 0 #383837;
 }
 .large-button {
   width: 300px;
   height: 60px;
   font-size: 30px;
   line-height: 60px;
+  box-shadow: 0 11px 0 #383837;
+  background-color: #e2d285;
+  border-radius: 7px;
+  border-top: 2px solid beige;
+  cursor: pointer;
+}
+.large-button:hover {
+  background-color: #ead881;
+}
+.large-button:active {
+  -ms-transform: translate(0, 3px);
+  /* IE 9 */
+  -webkit-transform: translate(0, 3px);
+  /* Safari */
+  transform: translate(0, 3px);
+  box-shadow: 0 5px 0 #383837;
+}
+.large-button:active {
+  -ms-transform: translate(0, 4px);
+  /* IE 9 */
+  -webkit-transform: translate(0, 4px);
+  /* Safari */
+  transform: translate(0, 4px);
+  box-shadow: 0 7px 0 #383837;
 }
 /******************************************************************************/
 .clickable {
