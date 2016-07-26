@@ -268,6 +268,49 @@ html #app-wrapper #content #players-page #players-container #players-list-contai
   position: relative;
   border-top: 2px solid #321244;
 }
+html #app-wrapper #content #players-page #players-container #players-list-container #players-list {
+  margin-top: 40px;
+}
+html #app-wrapper #content #players-page #players-container #players-list-container #players-list #players-list-title {
+  font-weight: bold;
+  padding-bottom: 40px;
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+}
+html #app-wrapper #content #players-page #players-container #players-list-container #players-list #players-list-table {
+  background-color: #3c4954;
+  text-align: center;
+  min-width: 500px;
+  max-width: 700px;
+  width: 70%;
+}
+html #app-wrapper #content #players-page #players-container #players-list-container #players-list #players-list-table thead tr {
+  background-color: #213748;
+  padding: 20px;
+}
+html #app-wrapper #content #players-page #players-container #players-list-container #players-list #players-list-table th {
+  padding: 10px 20px 20px 20px;
+}
+html #app-wrapper #content #players-page #players-container #players-list-container #players-list #players-list-table td {
+  text-align: center;
+}
+html #app-wrapper #content #players-page #players-container #players-list-container #players-list #players-list-table .table-odd-row {
+  background-color: #45515a;
+}
+html #app-wrapper #content #players-page #players-container #players-list-container #players-list #players-list-table .table-even-row {
+  background-color: #344350;
+}
+html #app-wrapper #content #players-page #players-container #players-list-container #players-list #players-list-table #players-list-color-box {
+  width: 70px;
+  height: 20px;
+  background-color: grey;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+html #app-wrapper #content #players-page #players-container #players-list-container #players-list #players-list-table .players-list-remove-player:hover {
+  color: #636263;
+  cursor: pointer;
+}
 /******************************************************************************/
 /******************************************************************************/
 .font-app-title {

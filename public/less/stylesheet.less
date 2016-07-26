@@ -62,6 +62,12 @@
 @circle-position-offset: (@half-circle-size + @circle-border-size + @add-player-button-container-border-size);
 @behind-circle-color: @new-player-container-color;
 
+@players-list-table-color: #3c4954;
+@players-list-table-color-head: #213748;
+@players-list-table-color-odd: #45515a;
+@players-list-table-color-even: #344350;
+@players-list-color-box-default-color: grey;
+@players-list-remove-player-onhover: #636263;
 
 
 
@@ -299,6 +305,59 @@ html {
                         background-color: @players-list-container-color;
                         position: relative;
                         border-top: @add-player-button-container-border-size solid @circle-border-color;
+
+                        #players-list {
+                            margin-top: 40px;
+
+                            #players-list-title {
+                                font-weight: bold;
+                                padding-bottom: 40px;
+                                .font-medium;
+                            }
+
+                            #players-list-table {
+                                background-color: @players-list-table-color;
+                                text-align: center;
+                                min-width: 500px;
+                                max-width: 700px;
+                                width: 70%;
+
+                                 thead tr {
+                                    background-color: @players-list-table-color-head;
+                                    padding: 20px;
+                                }
+
+                                th {
+                                    padding: 10px 20px 20px 20px;
+                                }
+
+                                td {
+                                    text-align: center;
+                                }
+
+                                .table-odd-row {
+                                    background-color: @players-list-table-color-odd;
+                                }
+                                .table-even-row {
+                                    background-color: @players-list-table-color-even;
+                                }
+
+                                #players-list-color-box {
+                                    width: 70px;
+                                    height: 20px;
+                                    background-color: @players-list-color-box-default-color;
+                                    border-radius: 5px;
+                                    margin: 0 auto;
+                                }
+
+                                .players-list-remove-player:hover {
+                                    color: @players-list-remove-player-onhover;
+                                    cursor: pointer;
+                                }
+
+                            }
+
+                        }
 
                     }
 
