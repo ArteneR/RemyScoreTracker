@@ -1,6 +1,5 @@
 
 (function(global) {
-    ""
 
     global.toggleNewPlayerContainerHeight = function(delay) {
         $('#new-player-container').animate({
@@ -67,6 +66,7 @@
     $("#players-list tbody").append(players_list_no_record);
     $("#page-title").html("Players");
 
+
     $("#back-button").click(function() {
         hideNavBar();
         loadPage("start-page");
@@ -120,6 +120,12 @@
         $("#new-player-name").val('');
         $("#new-player-color").val(defaultColor);
         $("#selected-color-preview").html('(' + defaultColor + ')');
+    });
+
+    $("#players-btn-proceed").click(function() {
+
+        loadPage("game-page");
+
     });
 
 

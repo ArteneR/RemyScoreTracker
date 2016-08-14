@@ -1,7 +1,6 @@
 var nav_bar_height = 0;
 
 
-
 var loadPage = function(page_name) {
 
     var page_html_path = "public/pages/" + page_name + ".html";

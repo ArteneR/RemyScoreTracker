@@ -50,7 +50,7 @@
 
 @new-player-title-color: #5e9861;
 
-@players-list-container-height: 900px;
+@players-list-container-height: 100%;
 @players-list-container-color: @add-player-button-container-color;
 
 @circle-size: 40px;
@@ -69,6 +69,11 @@
 @players-list-color-box-default-color: grey;
 @players-list-remove-player-onhover: #636263;
 
+@new-game-button-container-height: 150px;
+@new-game-button-container-color: #434d56;
+@new-game-button-container-border-size: 2px;
+
+@new-game-button-height: @medium-button-height;
 
 
 html {
@@ -308,6 +313,7 @@ html {
 
                         #players-list {
                             margin-top: 40px;
+                            padding-bottom: 80px;
 
                             #players-list-title {
                                 font-weight: bold;
@@ -357,6 +363,64 @@ html {
 
                             }
 
+                        }
+
+                    }
+
+                    #players-proceed {
+                        background-color: @add-player-button-container-color;
+                        height: 500px;
+
+                        #players-btn-proceed {
+                            display: inline-block;
+                            .medium-button;
+                        }
+                    }
+
+                }
+
+            }
+
+            #game-page {
+
+                #new-game-button-container {
+                    height: @new-game-button-container-height;
+                    background-color: @new-game-button-container-color;
+                    position: relative;
+                    border-bottom: @new-game-button-container-border-size solid @circle-border-color;
+
+                    #new-game-button-line {
+                        @container-and-button-diff: calc(@new-game-button-container-height~"-"@new-game-button-height);
+                        @x-axis: 0;
+                        @y-axis: calc(@container-and-button-diff~"/ 2");
+                        -ms-transform: translate(@x-axis, @y-axis); /* IE 9 */
+                       	-webkit-transform: translate(@x-axis, @y-axis); /* Safari */
+                        transform: translate(@x-axis, @y-axis);
+
+                        #new-game-button {
+                            .centered-x-axis;
+                        }
+                    }
+
+                }
+
+                #game-container {
+
+                    #current-game-container {
+
+                        #current-game-title {
+                            background-color: red;
+                            height: 20px;
+                        }
+
+                        #current-game-info {
+                            background-color: yellow;
+                            height: 20px;
+                        }
+
+                        #current-game-calculate {
+                            background-color: blue;
+                            height: 20px;
                         }
 
                     }

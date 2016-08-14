@@ -263,13 +263,14 @@ html #app-wrapper #content #players-page #players-container #new-player-containe
   position: absolute;
 }
 html #app-wrapper #content #players-page #players-container #players-list-container {
-  height: 900px;
+  height: 100%;
   background-color: #434d56;
   position: relative;
   border-top: 2px solid #321244;
 }
 html #app-wrapper #content #players-page #players-container #players-list-container #players-list {
   margin-top: 40px;
+  padding-bottom: 80px;
 }
 html #app-wrapper #content #players-page #players-container #players-list-container #players-list #players-list-title {
   font-weight: bold;
@@ -310,6 +311,72 @@ html #app-wrapper #content #players-page #players-container #players-list-contai
 html #app-wrapper #content #players-page #players-container #players-list-container #players-list #players-list-table .players-list-remove-player:hover {
   color: #636263;
   cursor: pointer;
+}
+html #app-wrapper #content #players-page #players-container #players-proceed {
+  background-color: #434d56;
+  height: 500px;
+}
+html #app-wrapper #content #players-page #players-container #players-proceed #players-btn-proceed {
+  display: inline-block;
+  width: 200px;
+  height: 40px;
+  font-size: 20px;
+  line-height: 40px;
+  box-shadow: 0 8px 0 #383837;
+  background-color: #e2d285;
+  border-radius: 7px;
+  border-top: 2px solid beige;
+  cursor: pointer;
+}
+html #app-wrapper #content #players-page #players-container #players-proceed #players-btn-proceed:hover {
+  background-color: #ead881;
+}
+html #app-wrapper #content #players-page #players-container #players-proceed #players-btn-proceed:active {
+  -ms-transform: translate(0, 3px);
+  /* IE 9 */
+  -webkit-transform: translate(0, 3px);
+  /* Safari */
+  transform: translate(0, 3px);
+  box-shadow: 0 5px 0 #383837;
+}
+html #app-wrapper #content #players-page #players-container #players-proceed #players-btn-proceed:active {
+  -ms-transform: translate(0, 3px);
+  /* IE 9 */
+  -webkit-transform: translate(0, 3px);
+  /* Safari */
+  transform: translate(0, 3px);
+  box-shadow: 0 5px 0 #383837;
+}
+html #app-wrapper #content #game-page #new-game-button-container {
+  height: 150px;
+  background-color: #434d56;
+  position: relative;
+  border-bottom: 2px solid #321244;
+}
+html #app-wrapper #content #game-page #new-game-button-container #new-game-button-line {
+  -ms-transform: translate(0, calc(calc(150px - 40px) / 2));
+  /* IE 9 */
+  -webkit-transform: translate(0, calc(calc(150px - 40px) / 2));
+  /* Safari */
+  transform: translate(0, calc(calc(150px - 40px) / 2));
+}
+html #app-wrapper #content #game-page #new-game-button-container #new-game-button-line #new-game-button {
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+html #app-wrapper #content #game-page #game-container #current-game-container #current-game-title {
+  background-color: red;
+  height: 20px;
+}
+html #app-wrapper #content #game-page #game-container #current-game-container #current-game-info {
+  background-color: yellow;
+  height: 20px;
+}
+html #app-wrapper #content #game-page #game-container #current-game-container #current-game-calculate {
+  background-color: blue;
+  height: 20px;
 }
 /******************************************************************************/
 /******************************************************************************/
